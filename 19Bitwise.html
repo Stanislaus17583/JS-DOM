@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv1,
+        #myDiv2 {
+            background-color: blueviolet;
+            padding: 60px;
+        }
+        
+        #myP1,
+        #myP2 {
+            background-color: crimson;
+            font-size: 25px;
+            border: 1px solid;
+            padding: 25px;
+        }
+    </style>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+</head>
+
+<body>
+    <h2>
+        JavaScript addEventListener()
+    </h2>
+
+    <div id="myDiv1">
+        <h2>
+            Bubbling
+        </h2>
+        <p id="myP1">Click here</p>
+    </div><br>
+
+    <div id="myDiv2">
+        <h2>
+            Capturing
+        </h2>
+        <p id="myP2">Click here</p>
+    </div>
+
+    <script>
+        document.getElementById("myP1").addEventListener("click", function() {
+            alert("You clicked the smaller element");
+        }, false)
+
+        document.getElementById("myDiv1").addEventListener("click", function() {
+            alert("You clicked the larger element");
+        }, false)
+
+        document.getElementById("myP2").addEventListener("click", function() {
+            alert("You clicked the smaller element");
+        }, true)
+
+        document.getElementById("myDiv2").addEventListener("click", function() {
+            alert("You clicked the larger element");
+        }, true)
+    </script>
+
+
+</body>
+
+</html>

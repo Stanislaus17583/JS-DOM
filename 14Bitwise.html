@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="checkCookies()">
+    <!-- Reacting to Events -->
+    <h1 onclick="changeText(this)">Click on this text</h1>
+
+    <script>
+        function changetext(id) {
+            id.innerHTML = "Ooops!";
+        }
+    </script>
+    <button onclick="displayDate()">Try it</button>
+    <script>
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+    <p id="demo">
+
+    </p>
+    <script>
+        function checkCookies() {
+            var text = "";
+            if (navigator.cookieEnabled == true) {
+                text = "Cookies are enabled,";
+            } else {
+                text = "Cookies are not enabled.";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

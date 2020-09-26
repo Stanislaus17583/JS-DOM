@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        Finding HTML Elements by Tag name
+    </h2>
+
+    <div id="main">
+        <p>The DOM is very useful.</p>
+        <p>This example demonstrates the <b> getElelmentsByTagName</b> menthod.</p>
+    </div>
+
+    <p id="demo"></p>
+    <script>
+        var x = document.getElementById("main");
+        var y = document.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML = 'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+    </script>
+</body>
+
+</html>

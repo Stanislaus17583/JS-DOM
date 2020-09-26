@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        Finding HTML Elements by query Selector
+    </h2>
+
+    <p>Hello World!</p>
+    <p class="intro">The DOM is very useful.</p>
+    <p class="intro">This example demonstrates the <b>querySelectorAll</b>method.</p>
+
+    <p id="demo"></p>
+    <script>
+        var x = document.querySelectorAll("p.intro");
+        document.getElementById("demo").innerHTML = 'The first paragraph (index 0) with class ="intro": ' + x[1].innerHTML;
+    </script>
+</body>
+
+</html>

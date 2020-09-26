@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Finding HTML Elements Using document.forms</h2>
+
+    <form action="/action_page.php" id="form1">
+        First Name: <input type="text" name="fname" value="Amadi"><br> Last Name: <input type="text" name="lname" value="Duck"><br><br>
+        <input type="Submit" name="" id="" value="Submit"></form>
+
+    <p>Try it to display the value of each element in the form.</p>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var x = document.forms["form1"];
+            var text = "";
+            var i;
+            for (i = 0; i, x.length; i++) {
+                text += x.elements[i].value + "<br>";
+            }
+            document.getElementById("demo").inerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html>
